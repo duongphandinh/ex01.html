@@ -10,9 +10,10 @@
 
 <body>
     <script>
-        function checkNT(number) {
             let count = 0;
             let countSNT = 0;
+            let sum = 0;
+            let number = Number(prompt("nhap N"))
             for (let i = 2; i < 1000; i++) {
                 if (countSNT < number) {
                     for (let j = 1; j <= i; j++) {
@@ -23,15 +24,17 @@
                     if (count == 2) {
                         document.write(i + "<br>");
                         countSNT += 1;
+                        sum += i;
                     }
                     count = 0;
                 } else {
                     break;
                 }
             }
-        }
+            document.write(sum);
+        
 
-        let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
+        
         checkNT(number);
     </script>
 </body>
